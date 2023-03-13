@@ -14,5 +14,9 @@
     "@matterport/webcomponent": "^0.1.5",
     "lil-gui": "^0.17.0",
     "three": "^0.148.0"
+  },
+  "engines" : { 
+    "npm" : ">=8.0.0 <9.0.0",
+    "node" : ">=16.0.0 <17.0.0"
   }
 }
