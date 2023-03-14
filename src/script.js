@@ -269,7 +269,7 @@ switchView.addEventListener('click', () => {
             switchView.innerHTML = "Switch to <br/> simplified view"
 
         } catch (e) {
-            error.innerHTML = "Satellite view not ready yet! <br/> Try again in a few seconds."
+            error.innerHTML = "Satellite view is still loading! <br/> Try again in 5 seconds."
             scene.children[4].visible = true
         }
     }
@@ -305,7 +305,9 @@ function activateMatterport (){
 function deactivateMatterport (){
     state = 0;
     scene.children[4].visible = true
-    scene.children[5].visible = false
+    try {
+        scene.children[5].visible = false
+    } catch (e) {console.log("Satellite view not loaded yet.")};
 
     matterportFrame.className = "inactive"
     selectedFloor = null;
